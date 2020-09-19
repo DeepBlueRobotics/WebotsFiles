@@ -1,0 +1,112 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.40337461451316636 0.9068625638824798 0.12202135302827001 0.6439254388424825
+  position 0.7520242315480828 0.4467326351119563 1.014560370353042
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+  floorTileSize 0.25 0.25
+  wallThickness 0.1
+}
+Robot {
+  translation 2.0038009808359875e-17 0.04960751200520145 1.059480471520345e-17
+  rotation 0.7056959140597266 0.47102494108495074 0.5292719355447871 -1.4498901284667998e-16
+  children [
+    Solid {
+      translation 6.121921849571178e-07 -0.0001241136744620855 -2.615700718542412e-15
+      rotation -1.1654794534070758e-11 2.5332144852412213e-08 -0.9999999999999996 1.223839062305243e-05
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position 1.2916438894737332e-11
+            anchor -0.05 0 0
+          }
+          device [
+            RotationalMotor {
+              name "Right"
+            }
+          ]
+          endPoint Solid {
+            translation -0.04999999999999697 -2.4877111803739416e-06 -1.701347398980458e-14
+            rotation 3.34409136563902e-09 -3.3441036491950503e-09 1 1.5707999999999998
+            children [
+              DEF WHEEL Shape {
+                appearance PBRAppearance {
+                  baseColor 0.5 0.5 0.5
+                  metalness 0.5
+                }
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.05
+                }
+              }
+            ]
+            name "solid(1)"
+            boundingObject USE WHEEL
+            physics Physics {
+            }
+            linearVelocity 1.1362640003776638e-10 7.583025901492765e-07 4.709776910721599e-12
+            angularVelocity 1.2895747233350969e-10 1.7004286768214114e-11 -2.2985804082923126e-09
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position -1.2886928883525126e-11
+            anchor 0.05 0 0
+          }
+          device [
+            RotationalMotor {
+              name "Left"
+            }
+          ]
+          endPoint Solid {
+            translation 0.05 0 0
+            rotation -6.443440773639563e-12 6.443464441762564e-12 1 1.5707999999999998
+            children [
+              DEF WHEEL Shape {
+                appearance PBRAppearance {
+                  baseColor 0.5 0.5 0.5
+                  metalness 0.5
+                }
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.05
+                }
+              }
+            ]
+            boundingObject USE WHEEL
+            physics Physics {
+            }
+            linearVelocity 1.153774202060409e-10 7.580687879003551e-07 -4.703578830977992e-12
+            angularVelocity -1.2873500939162315e-10 1.700744169351691e-11 -2.29849570698245e-09
+          }
+        }
+        Shape {
+          appearance PBRAppearance {
+            metalness 0.7
+          }
+          geometry DEF BASE Box {
+            size 0.1 0.1 0.1
+          }
+        }
+      ]
+      boundingObject USE BASE
+      physics Physics {
+      }
+      linearVelocity 1.1535507523916828e-10 7.579115801424794e-07 -1.1676450349950062e-15
+      angularVelocity -7.157487357050268e-14 1.7009648739119538e-11 -2.2984841395243715e-09
+    }
+  ]
+  boundingObject USE BASE
+  physics Physics {
+  }
+  linearVelocity 4.089003206868069e-17 6.891459768045202e-07 -1.447920033478076e-17
+  angularVelocity -2.664535259100382e-16 -1.6319383112799748e-16 -9.325873406851302e-16
+}
